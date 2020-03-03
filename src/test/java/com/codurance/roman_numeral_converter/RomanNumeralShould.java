@@ -10,7 +10,8 @@ public class RomanNumeralShould {
   @CsvSource({
           "1,I",
           "2,II",
-          "3,III"
+          "3,III",
+          "5,V"
   })
   void convert_integer_to_roman_numeral(int arabic, String romanNumeral) {
     RomanNumeral converter = new RomanNumeral();
