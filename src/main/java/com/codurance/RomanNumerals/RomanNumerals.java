@@ -5,6 +5,18 @@ public class RomanNumerals {
     int arabic = number;
     String result = "";
 
+
+
+    int hundreds = arabic / 100;
+    for (int i = 0; i < hundreds; i++) {
+      result += "C";
+      arabic -= 100;
+    }
+    if (arabic >= 50) {
+      result += "L";
+      arabic -= 50;
+    }
+
     int tens = arabic / 10;
     for (int i = 0; i < tens; i++) {
       result += "X";

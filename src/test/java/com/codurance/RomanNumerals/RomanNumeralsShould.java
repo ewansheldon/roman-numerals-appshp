@@ -73,4 +73,46 @@ public class RomanNumeralsShould {
     String roman = romanNumerals.arabicToRoman(30);
     assertEquals("XXX", roman);
   }
+
+  @Test
+  public void fifty_returns_L() {
+    String roman = romanNumerals.arabicToRoman(50);
+    assertEquals("L", roman);
+  }
+
+  @Test
+  public void sixty_returns_LX() {
+    String roman = romanNumerals.arabicToRoman(60);
+    assertEquals("LX", roman);
+  }
+
+  @Test
+  public void seventy_returns_LXX() {
+    String roman = romanNumerals.arabicToRoman(70);
+    assertEquals("LXX", roman);
+  }
+
+  @Test
+  public void eighty_returns_LXXX() {
+    String roman = romanNumerals.arabicToRoman(80);
+    assertEquals("LXXX", roman);
+  }
+
+  @Test
+  public void one_hundred_returns_C() {
+    String roman = romanNumerals.arabicToRoman(100);
+    assertEquals("C", roman);
+  }
+
+  @Test
+  public void two_hundred_returns_CC() {
+    String roman = romanNumerals.arabicToRoman(200);
+    assertEquals("CC", roman);
+  }
+
+  @Test
+  public void three_hundred_returns_CCC() {
+    String roman = romanNumerals.arabicToRoman(300);
+    assertEquals("CCC", roman);
+  }
 }
