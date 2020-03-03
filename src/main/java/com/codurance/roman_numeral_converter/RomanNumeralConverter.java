@@ -5,19 +5,33 @@ public class RomanNumeralConverter {
         String roman = "";
 
         for (int i = 0; i < arabic; i++) {
-            while (arabic >= 10) {
-                roman += "X";
-                arabic -= 10;
+            while (arabic >= romanNumerals.TEN.arabic) {
+                roman += romanNumerals.TEN.roman;
+                arabic -= romanNumerals.TEN.arabic;
             }
-            if (arabic >= 5) {
-                roman += "V";
-                arabic -= 5;
+            if (arabic >= romanNumerals.FIVE.arabic) {
+                roman += romanNumerals.FIVE.roman;
+                arabic -= romanNumerals.FIVE.arabic;
             }
-            if (arabic > 0) {
-                roman += "I";
+            if (arabic >= romanNumerals.ONE.arabic) {
+                roman += romanNumerals.ONE.roman;
             }
         }
 
         return roman;
+    }
+
+    private enum romanNumerals {
+        TEN ("X", 10),
+        FIVE ("V", 5),
+        ONE ("I", 1);
+
+        public String roman;
+        public int arabic;
+
+        romanNumerals(String roman, int arabic) {
+            this.roman = roman;
+            this.arabic = arabic;
+        }
     }
 }
