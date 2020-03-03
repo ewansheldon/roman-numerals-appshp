@@ -30,4 +30,10 @@ public class RomanNumeralsShould {
     String roman = romanNumerals.arabicToRoman(3);
     Assert.assertEquals("III", roman);
   }
+
+  @Test
+  public void five_returns_V() {
+    String roman = romanNumerals.arabicToRoman(5);
+    Assert.assertEquals("V", roman);
+  }
 }
