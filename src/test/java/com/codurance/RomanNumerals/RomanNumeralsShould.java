@@ -4,6 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class RomanNumeralsShould {
   RomanNumerals romanNumerals;
 
@@ -16,24 +18,42 @@ public class RomanNumeralsShould {
   @Test
   public void one_returns_I() {
     String roman = romanNumerals.arabicToRoman(1);
-    Assert.assertEquals("I", roman);
+    assertEquals("I", roman);
   }
 
   @Test
   public void two_returns_II() {
     String roman = romanNumerals.arabicToRoman(2);
-    Assert.assertEquals("II", roman);
+    assertEquals("II", roman);
   }
 
   @Test
   public void three_returns_III() {
     String roman = romanNumerals.arabicToRoman(3);
-    Assert.assertEquals("III", roman);
+    assertEquals("III", roman);
   }
 
   @Test
   public void five_returns_V() {
     String roman = romanNumerals.arabicToRoman(5);
-    Assert.assertEquals("V", roman);
+    assertEquals("V", roman);
+  }
+
+  @Test
+  public void six_returns_VI() {
+    String roman = romanNumerals.arabicToRoman(6);
+    assertEquals("VI", roman);
+  }
+
+  @Test
+  public void seven_returns_VII() {
+    String roman = romanNumerals.arabicToRoman(7);
+    assertEquals("VII", roman);
+  }
+
+  @Test
+  public void eight_returns_VIII() {
+    String roman = romanNumerals.arabicToRoman(8);
+    assertEquals("VIII", roman);
   }
 }
