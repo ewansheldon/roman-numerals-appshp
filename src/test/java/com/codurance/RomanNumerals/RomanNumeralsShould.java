@@ -14,7 +14,6 @@ public class RomanNumeralsShould {
     romanNumerals = new RomanNumerals();
   }
 
-  
   @Test
   public void one_returns_I() {
     String roman = romanNumerals.arabicToRoman(1);
@@ -55,5 +54,23 @@ public class RomanNumeralsShould {
   public void eight_returns_VIII() {
     String roman = romanNumerals.arabicToRoman(8);
     assertEquals("VIII", roman);
+  }
+
+  @Test
+  public void ten_returns_X() {
+    String roman = romanNumerals.arabicToRoman(10);
+    assertEquals("X", roman);
+  }
+
+  @Test
+  public void twenty_returns_XX() {
+    String roman = romanNumerals.arabicToRoman(20);
+    assertEquals("XX", roman);
+  }
+
+  @Test
+  public void thirty_returns_XXX() {
+    String roman = romanNumerals.arabicToRoman(30);
+    assertEquals("XXX", roman);
   }
 }

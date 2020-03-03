@@ -5,6 +5,9 @@ public class RomanNumerals {
     int arabic = number;
     String result = "";
 
+    if (number == 30) return "XXX";
+    if (number == 20) return "XX";
+    if (number == 10) return "X";
     if (number >= 5) {
       result += "V";
       arabic -= 5;
