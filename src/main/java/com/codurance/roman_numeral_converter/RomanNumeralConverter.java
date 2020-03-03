@@ -4,17 +4,10 @@ public class RomanNumeralConverter {
     public String arabicToRoman(int arabic) {
         String roman = "";
 
-        for (int i = 0; i < arabic; i++) {
-            while (arabic >= romanNumerals.TEN.arabic) {
-                roman += romanNumerals.TEN.roman;
-                arabic -= romanNumerals.TEN.arabic;
-            }
-            if (arabic >= romanNumerals.FIVE.arabic) {
-                roman += romanNumerals.FIVE.roman;
-                arabic -= romanNumerals.FIVE.arabic;
-            }
-            if (arabic >= romanNumerals.ONE.arabic) {
-                roman += romanNumerals.ONE.roman;
+        for (romanNumerals numeral : romanNumerals.values()){
+            while (arabic >= numeral.arabic) {
+                roman += numeral.roman;
+                arabic -= numeral.arabic;
             }
         }
 
