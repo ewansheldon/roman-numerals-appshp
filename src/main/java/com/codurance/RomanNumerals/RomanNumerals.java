@@ -5,10 +5,13 @@ public class RomanNumerals {
     int arabic = number;
     String result = "";
 
-    if (number == 30) return "XXX";
-    if (number == 20) return "XX";
-    if (number == 10) return "X";
-    if (number >= 5) {
+    int tens = arabic / 10;
+    for (int i = 0; i < tens; i++) {
+      result += "X";
+      arabic -= 10;
+    }
+
+    if (arabic >= 5) {
       result += "V";
       arabic -= 5;
     }
