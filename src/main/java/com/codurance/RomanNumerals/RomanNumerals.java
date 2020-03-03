@@ -12,6 +12,7 @@ public class RomanNumerals {
       result += "C";
       arabic -= 100;
     }
+
     if (arabic >= 50) {
       result += "L";
       arabic -= 50;
@@ -23,13 +24,16 @@ public class RomanNumerals {
       arabic -= 10;
     }
 
-    if (arabic >= 5) {
-      result += "V";
-      arabic -= 5;
-    }
+
 
     for (int i = 0; i < arabic; i++) {
-      result += "I";
+      if (arabic >= 5) {
+        result += "V";
+        arabic -= 5;
+      }
+      if (arabic > 0){
+        result += "I";
+      }
     }
 
     return result;
