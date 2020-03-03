@@ -5,7 +5,13 @@ public class RomanNumeralConverter {
         String roman = "";
 
         for (int i = 0; i < arabic; i++) {
-            roman += "I";
+            if (arabic >= 5) {
+                roman += "V";
+                arabic -= 5;
+            }
+            if (arabic > 0) {
+                roman += "I";
+            }
         }
 
         return roman;
