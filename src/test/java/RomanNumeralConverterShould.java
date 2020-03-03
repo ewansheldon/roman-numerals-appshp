@@ -14,6 +14,9 @@ public class RomanNumeralConverterShould {
             "VI,6",
             "VII,7",
             "VIII,8",
+            "X,10",
+            "XX,20",
+            "XXX,30",
     })
     public void converts_arabic_int_to_roman_string(String roman, int arabic) {
         RomanNumeralConverter converter = new RomanNumeralConverter();
