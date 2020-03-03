@@ -16,7 +16,14 @@ public class RomanNumeralConverterShould {
             "VIII,8",
             "X,10",
             "XX,20",
-            "XXX,30"
+            "XXX,30",
+            "XL,40",
+            "L,50",
+            "XC,90",
+            "C,100",
+            "D,500",
+            "M,1000",
+            "MI,1001"
     })
     public void converts_arabic_int_to_roman_string(String roman, int arabic) {
         RomanNumeralConverter converter = new RomanNumeralConverter();

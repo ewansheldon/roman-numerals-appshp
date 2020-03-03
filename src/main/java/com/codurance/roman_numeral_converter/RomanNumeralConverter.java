@@ -15,6 +15,12 @@ public class RomanNumeralConverter {
     }
 
     private enum romanNumerals {
+        ONE_THOUSAND("M", 1000),
+        FIVE_HUNDRED("D", 500),
+        ONE_HUNDRED("C", 100),
+        NINETY("XC", 90),
+        FIFTY("L", 50),
+        FORTY("XL", 40),
         TEN ("X", 10),
         FIVE ("V", 5),
         ONE ("I", 1);
